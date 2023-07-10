@@ -6,6 +6,7 @@ import { Messages } from '../models/Messages.js';
 import { LocalStorage } from "node-localstorage";
 import * as dotenv from 'dotenv';
 
+const router = express.Router();
 const app = express();
 app.use(cors());
 dotenv.config()
@@ -183,7 +184,5 @@ app.get('/messages/:room', async (req, res) => {
 const port = process.env.SOCKET_PORT || 3001;
  server.listen(port, () => console.log(`Socket listening on port ${port}`)
 );
-
-const router = express.Router();
 
 export default router;
