@@ -180,10 +180,9 @@ app.get('/messages/:room', async (req, res) => {
 });
 
 
-
-server.listen(3001, () => {
-  console.log('SERVER RUNNING');
-});
+const port = process.env.SOCKET_PORT || 3001;
+ server.listen(port, () => console.log(`Socket listening on port ${port}`)
+);
 
 const router = express.Router();
 
