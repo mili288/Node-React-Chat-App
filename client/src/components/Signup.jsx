@@ -14,7 +14,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/users', { name, email, username, password });
+      await axios.post('https://chat-app-vlzr.onrender.com/users', { name, email, username, password });
       alert('User created!');
       setName('');
       setEmail('');

@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/users/login', { email, password });
+      const response = await axios.post('https://chat-app-vlzr.onrender.com/users/login', { email, password });
       const token = response.data.token;
       const username = response.data.user.username;
       const userId = response.data.user._id; // Get user ID from server response

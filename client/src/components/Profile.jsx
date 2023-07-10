@@ -11,7 +11,7 @@ function Profile() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/users/${id}`);
+        const response = await axios.get(`https://chat-app-vlzr.onrender.com/users/${id}`);
         setUser(response.data);
       } catch (error) {
         console.error(error);
