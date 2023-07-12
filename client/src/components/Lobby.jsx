@@ -5,7 +5,7 @@ import Chat from "../components/Chat";
 import { v4 as uuidv4 } from 'uuid';
 import { useNavigate } from 'react-router-dom';
 
-const socket = io.connect("http://localhost:3001");
+const socket = io.connect("https://mobile-app-chat.onrender.com");
 
 function App() {
   const [username, setUsername] = useState("");

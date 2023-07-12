@@ -13,7 +13,7 @@ function Chat({ username, room }) {
 
   useEffect(() => {
     // Connect to the server-side socket.io
-    const newSocket = io("http://localhost:3001");
+    const newSocket = io("https://mobile-app-chat.onrender.com");
     setSocket(newSocket);
 
     // Clean up the socket connection on component unmount
@@ -39,7 +39,7 @@ function Chat({ username, room }) {
 
   useEffect(() => {
     // Fetch the initial messages when the component mounts
-    fetch(`http://localhost:3001/messages/${room}`)
+    fetch(`https://mobile-app-chat.onrender.com/messages/${room}`)
       .then((response) => response.json())
       .then((data) => {
         setMessageList(data);

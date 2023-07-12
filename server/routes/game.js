@@ -20,7 +20,6 @@ const io = new Server(server, {
   },
 });
 
-
 // Store the active game rooms and their participants
 const gameRooms = {};
 
